@@ -34,8 +34,6 @@ namespace Socket_Server
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-
             //포트 파싱
             this._port = int.Parse(ConfigurationManager.ConnectionStrings["Port"].ConnectionString);
 
@@ -108,7 +106,6 @@ namespace Socket_Server
         {
             try
             {
-
                 this.BeginInvoke(new Action(delegate()
                 {
                     lb_log.BeginUpdate();
@@ -125,7 +122,6 @@ namespace Socket_Server
                     cm.Refresh();
 
                     lb_log.SetSelected(lb_log.Items.Count - 1, true);
-
 
                     lb_log.EndUpdate();
                 }));
